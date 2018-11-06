@@ -41,5 +41,11 @@ var config = {
 
       alert("Train successfully added");
 
+      //clears all of the text boxes//
+      $("#train-name-input").val("");
+      $("#destination-input").val("");
+      $("#start-input").val("");
+      $("#frequency-input").val("");
+  });
 
-  })
+  
