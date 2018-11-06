@@ -1,6 +1,6 @@
 //firebase is being initialized//
 var config = {
-    apiKey: "AIzaSyAlHz6B62w_kZy9IrBnIM7V1RV6gmbXlqE",
+    apiKey: "",
     authDomain: "train-schedule-f9ded.firebaseapp.com",
     databaseURL: "https://train-schedule-f9ded.firebaseio.com",
     projectId: "train-schedule-f9ded",
