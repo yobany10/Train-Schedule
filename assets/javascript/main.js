@@ -21,4 +21,22 @@ var config = {
       var trainDest = $("#destination-input").val().trim();
       var trainStart = moment($("#start-input").val().trim(), "MM/DD/YYYY").format("X");
       var trainFrequency = $("#frequency-input").val().trim();
+
+      //local "temporary" object is created for holding data//
+      var newTrain = {
+          name: trainName,
+          destination: trainDest,
+          start: trainStart,
+          frequency: trainFrequency
+      };
+
+      //uploads train data to the database//
+      database.ref().push(newTrain);
+
+      //logs everyting to console
+      console.log(newTrain.name);
+      console.log(newTrain.destination);
+      console.log(newTrain.start);
+      console.log(newTrain.frequency);
+
   })
