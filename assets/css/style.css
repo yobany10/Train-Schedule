@@ -1,13 +1,20 @@
+body {
+    background-color: rgb(150, 197, 150) !important;
+}
+
 .titleContainer {
-    background-color: rgb(11, 42, 87) !important;
+    background-color: rgb(41, 95, 59) !important;
 }
 
 .title {
+    font-family: 'Pacifico', cursive;
+    font-size: 70px;
     color: white;
     text-align: center;
 }
 
 .subtitle {
+    font-family: 'Quicksand', sans-serif;
     color: white;
     text-align: center;
 }
