@@ -11,3 +11,14 @@ var config = {
   firebase.initializeApp(config);
 
   var database = firebase.database();
+
+  //button for adding trains//
+  $("#add-train-btn").on("click", function(event) {
+      event.preventDefault();
+
+      //user input is grabbed//
+      var trainName = $("#train-name-input").val().trim();
+      var trainDest = $("#destination-input").val().trim();
+      var trainStart = moment($("#start-input").val().trim(), "MM/DD/YYYY").format("X");
+      var trainFrequency = $("#frequency-input").val().trim();
+  })
