@@ -19,7 +19,7 @@ var config = {
       //user input is grabbed//
       var trainName = $("#train-name-input").val().trim();
       var trainDest = $("#destination-input").val().trim();
-      var trainStart = moment($("#start-input").val().trim(), "MM/DD/YYYY").format("X");
+      var trainStart = moment($("#start-input").val().trim(), "HH:mm A").format("X");
       var trainFrequency = $("#frequency-input").val().trim();
 
       //local "temporary" object is created for holding data//
@@ -66,8 +66,23 @@ var config = {
       console.log(trainFrequency);
 
       //prettify the train start//
-      var trainStartPretty = moment.unix(trainStart).format("MM/DD/YYYY");
+      var trainStartPretty = moment.unix(trainStart).format("hh:mm A");
 
-      //calculate time since first train//
-      var 
-  })
+      //calculate time//
+      var tRemainder = moment().diff(moment.unix(trainStart), "minutes") %trainFrequency;
+      var tMinutes = trainFrequency - tRemainder;
+
+      var tArrival = moment().add(tMinutes, "m").format("hh:mm A");
+
+      //create new row//
+      var newRow = $("<tr>").append(
+          $("<td>").text(trainName),
+          $("<td>").text(trainDest),
+          $("<td>").text(trainFrequency),
+          $("<td>").text(tArrival),
+          $("<td>").text(tMinutes),
+      );
+
+      //append the new row to the table//
+      $("#train-table > tbody").append(newRow);
+  });
