@@ -1,14 +1,3 @@
-//firebase is being initialized//
-var config = {
-    apiKey: "",
-    authDomain: "train-schedule-f9ded.firebaseapp.com",
-    databaseURL: "https://train-schedule-f9ded.firebaseio.com",
-    projectId: "train-schedule-f9ded",
-    storageBucket: "train-schedule-f9ded.appspot.com",
-    messagingSenderId: "234105666979"
-  };
-
-  firebase.initializeApp(config);
 
   var database = firebase.database();
 
