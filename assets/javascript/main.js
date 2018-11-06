@@ -39,4 +39,7 @@ var config = {
       console.log(newTrain.start);
       console.log(newTrain.frequency);
 
+      alert("Train successfully added");
+
+
   })
