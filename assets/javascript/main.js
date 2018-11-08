@@ -8,6 +8,8 @@ var config = {
     messagingSenderId: "234105666979"
   };
 
+  var myKey = config.myKey;
+
   firebase.initializeApp(config);
 
   var database = firebase.database();
@@ -86,5 +88,4 @@ var config = {
       //append the new row to the table//
       $("#train-table > tbody").append(newRow);
 
-      var myKey = config.myKey;
   });
