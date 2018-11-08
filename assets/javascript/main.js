@@ -1,4 +1,14 @@
-firebase.initializeApp(config);
+//firebase is being initialized//
+var config = {
+    apiKey: myKey,
+    authDomain: "train-schedule-f9ded.firebaseapp.com",
+    databaseURL: "https://train-schedule-f9ded.firebaseio.com",
+    projectId: "train-schedule-f9ded",
+    storageBucket: "train-schedule-f9ded.appspot.com",
+    messagingSenderId: "234105666979"
+  };
+
+  firebase.initializeApp(config);
 
   var database = firebase.database();
 
@@ -75,4 +85,6 @@ firebase.initializeApp(config);
 
       //append the new row to the table//
       $("#train-table > tbody").append(newRow);
+
+      var myKey = config.myKey;
   });
